@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background: #fff;
+      }
+      marquee {
+        font-size: 250px;
+        font-weight: 800;
+        color: #000;
+        font-family: sans-serif;
+        height: 250px;
+      }
+      p {
+        color: #ff0000;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        font-family: monospace;
+        display: block;
+        margin: 1 auto;
+      }
+      h1 {
+        color: #ff0000;
+        text-align: center;
+        font-family: courier;
+        font-size: 27px;
+        vertical-align: top;
+        margin-right: 10px;
+        text-decoration: underline;
+      }
+      h2 {
+        color: #000;
+        text-align: center;
+        font-family: monospace;
+        font-size: 14px;
+        display: block;
+      }
+      .created-by {
+        color: #000;
+      }
+
+      .company-name {
+        color: #ff0000;
+      }
+
+      .subscribe-form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 410px;
+        margin: 0 auto;
+        border: 2px solid #000;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      .subscribe-form button {
+        border: none;
+        font-family: monospace;
+        font-size: 14px;
+        outline: none;
+      }
+      .subscribe-form input[type="email"] {
+        width: 150%;
+        padding: 10px;
+        border: none;
+        font-size: 16px;
+        outline: none;
+        background-color: #f2f2f2;
+      }
+      .subscribe-form button {
+        background-color: #ff0000;
+        color: #000;
+      }
+      .subscribe-form button:hover {
+        color: #fff;
+        background: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <marquee>COMING SOON</marquee>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>"Open the Trunk to Your Brand's Future"</h1>
+    <br />
+    <br />
+
+    <h2>Sign up to be notified when we launch.</h2>
+
+    <form id="subscribe-form" action="submit.php" method="POST">
+      <div class="subscribe-form">
+        <div class="form-field">
+          <input
+            type="email"
+            id="email-input"
+            name="email"
+            placeholder="E-Mail Address"
+          />
+        </div>
+        <button type="submit">Subscribe</button>
+      </div>
+    </form>
+    <script>
+      const form = document.getElementById("subscribe-form");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const emailInput = document.getElementById("email-input");
+        const message = "You're in! Thanks for subscribing!";
+        alert(message); // Display message to the user
+        emailInput.value = "";
+      });
+    </script>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>
+      <span class="created-by">This page was crafted by</span>
+      <span class="company-name">Keke's Trunk, est. 2021</span> 👩🏾‍💻
+    </p>
+  </body>
+</html>
